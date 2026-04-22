@@ -19,7 +19,17 @@ function add(a, b) {
  return  a + b;
 }
 
-const result = add(5, 4);
+const result = add(5, 4);function introduce (name, city){
+    console.log(`hi, i am ${name} from ${city}`)
+}
+introduce("Ravi", "Chennai");
+
+const calculateArea = (width, height);{
+return width * height;
+}
+
+const result1 = calculateArea(10, 5);
+console.log(`The area is: ${result}`);
 console.log(result); // 8
 
 
@@ -31,9 +41,14 @@ console.log(result); // 8
 
 
 
+// 5. Arrow function to calculate area
+const calculateArea = (width, height) => {
+    return width * height;
+};
 
-function introduce (name, city){
-    console.log(`hi, i am ${name} from ${city}`)
-}
-introduce("Ravi", "Chennai");
+// Alternative "Short" version (Implicit return)
+// const calculateArea = (width, height) => width * height;
 
+// Calculate and print the result
+const result1 = calculateArea(10, 5);
+console.log(`The area is: ${result1}`);
