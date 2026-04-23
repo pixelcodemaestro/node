@@ -154,3 +154,7 @@ function describEmployee(emp) {
 }
 console.log(describEmployee(employees[0]));
 // Anita is a Developer earning ₹60000/month
+
+
+
+
