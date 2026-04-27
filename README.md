@@ -1,5 +1,5 @@
 # Node
-
+```
 Phase 1 → JavaScript Basics (foundation — can't skip this)
 
 Phase 2 → Node.js Core (how Node works, files, modules)
@@ -11,7 +11,7 @@ Phase 4 → Databases (storing data with MongoDB or PostgreSQL)
 Phase 5 → Frontend Connection (React + your Node backend)
 
 Phase 6 → Deploy (put it live on the internet)
-
+```
 ### 🚀 Let's Start — Phase 1: JavaScript Basics
 Before Node.js, you need JavaScript. Node is JavaScript, just running on your computer instead of a browser.
 Step 1 — Install the tools
@@ -26,10 +26,11 @@ node --version
 ```
 ### Step 2 — Your first JavaScript concepts
 Here are the core concepts you'll learn one by one. Tell me when you're ready and we'll dive into any of these with examples and exercises:
-
+```
 #Topic                   What it covers
 1.Variables & Data Types let, const, strings, numbers, booleans
 2.Functions              How to write reusable blocks of code
 3.Arrays & Objects       Storing collections of data
 4.Conditionals & Loops   if/else, for, while
 5.Async JavaScript       Callbacks, Promises, async/await ← critical for Node
+```
