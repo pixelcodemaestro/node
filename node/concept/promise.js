@@ -62,7 +62,7 @@ function orderFood(food) {
     console.log(`Ordering ${food}... 🛵`);
 
     setTimeout(() => {
-      const delivered = false; // change to false and see what happens
+      const delivered = true; // change to false and see what happens
 
       if (delivered) {
         resolve(food);
