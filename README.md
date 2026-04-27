@@ -1,4 +1,5 @@
 # Node
+
 Phase 1 → JavaScript Basics (foundation — can't skip this)
 
 Phase 2 → Node.js Core (how Node works, files, modules)
@@ -25,4 +26,10 @@ node --version
 ```
 ### Step 2 — Your first JavaScript concepts
 Here are the core concepts you'll learn one by one. Tell me when you're ready and we'll dive into any of these with examples and exercises:
-#TopicWhat it covers1Variables & Data Typeslet, const, strings, numbers, booleans2FunctionsHow to write reusable blocks of code3Arrays & ObjectsStoring collections of data4Conditionals & Loopsif/else, for, while5Async JavaScriptCallbacks, Promises, async/await ← critical for Node
+
+#Topic                   What it covers
+1.Variables & Data Types let, const, strings, numbers, booleans
+2.Functions              How to write reusable blocks of code
+3.Arrays & Objects       Storing collections of data
+4.Conditionals & Loops   if/else, for, while
+5.Async JavaScript       Callbacks, Promises, async/await ← critical for Node

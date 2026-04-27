@@ -12,3 +12,8 @@ function serveFood(food) {
 
 makeFood("coffee", serveFood);
 console.log("Setting the table... 🍴");
+
+
+
+
+
