@@ -1,53 +1,53 @@
-// const myPromise = new Promise((resolve, reject) => {
-//   const success = true;
+const myPromise = new Promise((resolve, reject) => {
+  const success = true;
 
-//   if (success) {
-//     resolve("Task completed! ✅");  // sends success result
-//   } else {
-//     reject("Something went wrong ❌"); // sends failure result
-//   }
-// });
+  if (success) {
+    resolve("Task completed! ✅");  // sends success result
+  } else {
+    reject("Something went wrong ❌"); // sends failure result
+  }
+});
 
-// myPromise
-//   .then((result) => {
-//     console.log(result); // runs if resolved
-//   })
-//   .catch((error) => {
-//     console.log(error);  // runs if rejected
-//   });
+myPromise
+  .then((result) => {
+    console.log(result); // runs if resolved
+  })
+  .catch((error) => {
+    console.log(error);  // runs if rejected
+  });
 
-// // Output:
-// // Task completed! ✅
+// Output:
+// Task completed! ✅
 
 
 
-// function makeFood(foodName) {
-//   return new Promise((resolve, reject) => {
-//     console.log(`Preparing ${foodName}... 👨‍🍳`);
+function makeFood(foodName) {
+  return new Promise((resolve, reject) => {
+    console.log(`Preparing ${foodName}... 👨‍🍳`);
 
-//     setTimeout(() => {
-//       const foodReady = true; // change to false to test failure
+    setTimeout(() => {
+      const foodReady = true; // change to false to test failure
 
-//       if (foodReady) {
-//         resolve(foodName); // success — food is ready
-//       } else {
-//         reject("Kitchen is closed ❌"); // failure
-//       }
-//     }, 3000);
-//   });
-// }
+      if (foodReady) {
+        resolve(foodName); // success — food is ready
+      } else {
+        reject("Kitchen is closed ❌"); // failure
+      }
+    }, 3000);
+  });
+}
 
-// makeFood("coffee")
-//   .then((food) => {
-//     console.log("Setting the table... 🍴");
-//     return food; // pass food to next .then()
-//   })
-//   .then((food) => {
-//     console.log(`your ${food} is ready! Enjoy 🍽️`);
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
+makeFood("coffee")
+  .then((food) => {
+    console.log("Setting the table... 🍴");
+    return food; // pass food to next .then()
+  })
+  .then((food) => {
+    console.log(`your ${food} is ready! Enjoy 🍽️`);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 // // Output:
 // // Preparing coffee... 👨‍🍳
