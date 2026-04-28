@@ -1,0 +1,19 @@
+# Dependency directories (The "Black Hole")
+node_modules/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs
+*.log
+
+# Environment variables (Sensitive Data)
+.env
+.env.test
+.env.production
+
+# Editor folders
+.vscode/
+.idea/
+DS_Store
