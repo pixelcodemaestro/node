@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-2xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-800 mb-8">User Directory</h1>
+
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-xl font-semibold mb-4">Add New User</h2>
+            <div class="flex gap-4">
+                <input id="userName" type="text" placeholder="Name" class="border p-2 rounded w-full">
+                <input id="userAge" type="number" placeholder="Age" class="border p-2 rounded w-24">
+                <button onclick="addUser()" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Add</button>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <table class="w-full text-left">
+                <thead class="bg-gray-100 border-b">
+                    <tr>
+                        <th class="p-4">ID</th>
+                        <th class="p-4">Name</th>
+                        <th class="p-4">Age</th>
+                        <th class="p-4 text-right">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:3000/users';
+
+        // Load users on startup
+        async function fetchUsers() {
+            const res = await fetch(API_URL);
+            const users = await res.json();
+            const tableBody = document.getElementById('userTableBody');
+            tableBody.innerHTML = '';
+
+            users.forEach(user => {
+                tableBody.innerHTML += `
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-4">${user.id}</td>
+                        <td class="p-4 font-medium">${user.name}</td>
+                        <td class="p-4">${user.age}</td>
+                        <td class="p-4 text-right">
+                            <button onclick="deleteUser(${user.id})" class="text-red-500 hover:text-red-700 font-semibold">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        // Add User
+        async function addUser() {
+            const name = document.getElementById('userName').value;
+            const age = document.getElementById('userAge').value;
+
+            if (!name || !age) return alert('Please fill in both fields');
+
+            await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, age: parseInt(age) })
+            });
+
+            document.getElementById('userName').value = '';
+            document.getElementById('userAge').value = '';
+            fetchUsers();
+        }
+
+        // Delete User
+        async function deleteUser(id) {
+            if (!confirm('Are you sure?')) return;
+            await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
+            fetchUsers();
+        }
+
+        fetchUsers();
+    </script>
+</body>
+</html>

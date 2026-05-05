@@ -8,6 +8,8 @@ const DATA_FILE = path.join(__dirname, 'users.json');
 
 // Middleware - allows reading JSON from requests
 app.use(express.json());
+//  to server the frontend files (if any)
+app.use(express.static('public'));
 
 // ─── Helper Functions ───────────────────────────────────────
 
