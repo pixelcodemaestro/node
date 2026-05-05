@@ -1,27 +1,27 @@
 [
   {
     "id": 1,
-    "name": "Charlie",
-    "age": 22
+    "name": "Prasanth",
+    "age": 25
   },
-  {
-    "id": 2,
-    "name": "harsha",
-    "age": 29
+    {
+    "id": 4,
+    "name": "Aishwariya",
+    "age": 25
   },
-  {
-    "id": 3,
-    "name": "Charlie",
-    "age": 22
+    {
+    "id": 4,
+    "name": "aparna",
+    "age": 25
   },
   {
     "id": 4,
-    "name": "nava",
-    "age": 32
+    "name": "abi",
+    "age": 25
   },
   {
     "id": 5,
-    "name": "nad",
+    "name": "nadhiya",
     "age": 22
   }
 ]
