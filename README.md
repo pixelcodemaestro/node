@@ -32,5 +32,5 @@ Here are the core concepts you'll learn one by one. Tell me when you're ready an
 2.Functions              How to write reusable blocks of code
 3.Arrays & Objects       Storing collections of data
 4.Conditionals & Loops   if/else, for, while
-5.Async JavaScript       Callbacks, Promises, async/await ← critical for Node
+5.Async JavaScript       Callbacks, Promises, async/await ← critical for Node1
 ```
